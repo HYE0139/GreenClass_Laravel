@@ -13,7 +13,7 @@
         <a href="<?=route('boards.create')?>">
             <button type="button">글쓰기</button>
         </a>
-        <a href="<?=route('boards.login')?>">
+        <a href="<?=route('users.login')?>">
             <button type="button">로그인</button>
         </a>
         <!-- 쿼리스트링으로 들어감 show?i_board=10

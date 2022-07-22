@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1> JOIN. 회원가입 </h1>
-    <form action="{{ route('users.join') }}">
+    <form action="{{ route('users.insUser') }}">
         <div><label>ID <input type="text" name="user_id"></label></div>
         <div><label>PW <input type="password" name="password"></label></div>
         <div><label>NAME <input type="text" name="nicknm"></label></div>

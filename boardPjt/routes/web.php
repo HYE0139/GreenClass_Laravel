@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,7 @@ Route::prefix('/boards')->group(function() {
 });
 
 Route::prefix('/users')->group(function() {
+    Route::get('/', [UserController::class, "index"]);
     Route::get('/login', [UserController::class, "login"])->name('users.login');
     Route::get('/join', [UserController::class, "join"])->name('users.join');
     Route::post('/insUser', [UserController::class, "insUser"])->name('users.insUser');

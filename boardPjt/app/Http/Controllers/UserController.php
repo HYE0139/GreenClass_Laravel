@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
+    public function index() {
+        return view('user/index');
+    }
+
     public function login(Request $req) {
-        $id = $req->input('id');
+        $userId = $req->input("user_id");
+        $userPW = $req->input("password");
+        
     }
 
     public function join() {
@@ -22,6 +29,6 @@ class UserController extends Controller
         ]);
 
         $user->save();
-        return redirect('user/login');
+        return redirect('/users');
     }
 }
